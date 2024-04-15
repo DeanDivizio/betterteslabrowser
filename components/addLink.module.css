@@ -1,0 +1,71 @@
+.formContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    padding: 40px 20px;
+    min-height: 20vh;
+    background-color: #eeeeee99;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+.formContainer h2{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+.formContainer label{
+    font-size: calc(0.5rem + 0.5vw);
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-right: 0.5vw; 
+}
+.formContainer input{
+    font-size: calc(0.3rem + 0.5vw);
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-right: 0.5vw; 
+    padding: 5px;
+    max-width:100%;
+    border-radius: 0;
+}
+.formContainer p{
+    color: #161616;
+}
+.inputDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+
+}
+#urlDiv{
+    margin-bottom: 4vh;
+}
+
+.formContainer button{
+    padding: 10px 20px;
+    color: rgb(230, 230, 230);
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: calc(0.3rem + 0.5vw);
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 2vh;
+}
+.addButton{
+    background-color: #202020;
+}
+.closeButton{
+    background-color: #3a0303;
+}

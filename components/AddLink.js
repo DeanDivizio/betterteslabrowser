@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from 'react';
 import { addLink, getLinks } from '../app/actions';
+import styles from './addLink.module.css';
 
-const EntryForm = ({links, setLinks}) => {
+const EntryForm = ({links, setLinks, formStateToggle}) => {
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
 
@@ -11,11 +12,13 @@ const EntryForm = ({links, setLinks}) => {
     await addLink( name, url );
     const newLink = {displayName: name, url: url};
     setLinks([...links, newLink]);
+    formStateToggle(false);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className={styles.formContainer} onSubmit={handleSubmit}>
+      <h2>Add a Link</h2>
+      <div className={styles.inputDiv}>
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -25,7 +28,7 @@ const EntryForm = ({links, setLinks}) => {
           required
         />
       </div>
-      <div>
+      <div id={styles.urlDiv} className={styles.inputDiv}>
         <label htmlFor="url">URL:</label>
         <input
           type="text"
@@ -35,7 +38,8 @@ const EntryForm = ({links, setLinks}) => {
           required
         />
       </div>
-      <button type="submit">Add Entry</button>
+      <button className={styles.addButton} type="submit">Add Entry</button>
+      <button className={styles.closeButton} type="button" onClick={() => formStateToggle(false)}>Cancel</button>
     </form>
   );
 };

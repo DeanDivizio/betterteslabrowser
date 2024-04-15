@@ -18,3 +18,9 @@ h1{
     font-size: calc(6rem + 2vw);
     font-weight: 200;
 }
+h2{
+    font-size: calc(1rem + 2vw);
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 3vh;
+}

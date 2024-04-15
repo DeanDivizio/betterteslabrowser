@@ -16,3 +16,18 @@
     text-decoration: none;
     margin: 4vw;
 }
+
+.addLinkButton{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #202020;
+    color: rgb(230, 230, 230);
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 0;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 4vw;
+    font-size: calc(0.3rem + 0.5vw);
+    font-weight: 200;
+    letter-spacing: 1px;
+}

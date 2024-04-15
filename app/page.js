@@ -30,8 +30,8 @@ export default function Home() {
           </button>
         ))}
       </div>
+      <button className={styles.addLinkButton} onClick={handleClick}>Add Link</button>
       <div className={styles.addLinkSection}>
-        <button className={styles.addLinkButton} onClick={handleClick}>Add Link</button>
         {showForm && <EntryForm formState={showForm} formStateToggle={setShowForm} links={links} setLinks={setLinks} />}
       </div>
     </div>
