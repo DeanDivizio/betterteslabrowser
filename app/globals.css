@@ -1,9 +1,9 @@
+
 :root{
   background-color: #e6e6e6;
   background-image: radial-gradient(circle, #00000000 20%, #a4a4a4 100%);
 }
 .body{
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,5 +12,9 @@ a{
     font-size: calc(10px + 2vw);
     color: rgb(18, 18, 18);
     text-decoration: none;
+    font-weight: 200;
+}
+h1{
+    font-size: calc(6rem + 2vw);
     font-weight: 200;
 }

@@ -1,28 +1,16 @@
+"use client";
 import React, { useState } from 'react';
+import { addLink, getLinks } from '../app/actions';
 
-const EntryForm = () => {
+const EntryForm = ({links, setLinks}) => {
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent the form from refreshing the page
-
-    // Send a POST request to the server-side API
-    const response = await fetch('/api/addEntry/routes.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, url })
-    });
-
-    if (response.ok) {
-      alert("Entry added successfully!");
-      setName('');
-      setUrl('');
-    } else {
-      alert("Failed to add entry.");
-    }
+    await addLink( name, url );
+    const newLink = {displayName: name, url: url};
+    setLinks([...links, newLink]);
   };
 
   return (
