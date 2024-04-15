@@ -25,6 +25,7 @@ const EntryForm = ({links, setLinks, formStateToggle}) => {
           id="name"
           value={name}
           onChange={e => setName(e.target.value)}
+          placeholder='i.e. Google'
           required
         />
       </div>
@@ -35,6 +36,7 @@ const EntryForm = ({links, setLinks, formStateToggle}) => {
           id="url"
           value={url}
           onChange={e => setUrl(e.target.value)}
+          placeholder='i.e. www.google.com'
           required
         />
       </div>
