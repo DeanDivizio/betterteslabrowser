@@ -7,7 +7,7 @@ const client = new DynamoDBClient({
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     },
-    region: 'us-east-2' // specify your region
+    region: process.env.AWS_REGION
   });
 const docClient = DynamoDBDocumentClient.from(client);
 
@@ -17,8 +17,6 @@ export async function getLinks() {
     };
 
     try {
-        // console.log('Params:', params);
-        // console.log('DynamoDBClient Config:', client);
         const data = await docClient.send(new ScanCommand(params));
         console.log("GetItem succeeded:", JSON.stringify(data, null, 2));
         return data.Items;
